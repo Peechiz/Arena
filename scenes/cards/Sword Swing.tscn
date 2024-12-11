@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://pecgvw4bmr65"]
+
+[ext_resource type="Script" path="res://scripts/Actions/BasicAttack.gd" id="1_bg0yk"]
+
+[node name="SwordSwing" type="Node2D" groups=["Card"]]
+script = ExtResource("1_bg0yk")
+difficulty = 3
+damage = 1
+cardname = "Sword Swing"
+success_msg = "{source} swings with a sword, hitting {target} in the {part} and dealing {dmg} wound"

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://mpvvysyh2g7o"]
+
+[ext_resource type="Script" path="res://scripts/fighter.gd" id="1_4x5tk"]
+[ext_resource type="PackedScene" uid="uid://djrw4a80fj5b6" path="res://scenes/cards/Lance Bash.tscn" id="2_yl3sm"]
+[ext_resource type="PackedScene" uid="uid://nkapcjsnq312" path="res://scenes/cards/Lance Thrust.tscn" id="3_wj6og"]
+
+[node name="Lancer" type="Node2D"]
+script = ExtResource("1_4x5tk")
+fighter_name = "Lancer"
+hp = 3
+
+[node name="LanceBash" parent="." instance=ExtResource("2_yl3sm")]
+
+[node name="LanceThrust" parent="." instance=ExtResource("3_wj6og")]
+
+[node name="LanceThrust2" parent="." instance=ExtResource("3_wj6og")]

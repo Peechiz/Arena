@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7n1hcm4htajt"]
+
+[ext_resource type="Script" path="res://scripts/Actions/BasicAttack.gd" id="1_iq3n2"]
+
+[node name="SwordStab" type="Node2D" groups=["Card"]]
+script = ExtResource("1_iq3n2")
+difficulty = 4
+damage = 1
+cardname = "Sword Stab"
+success_msg = "{source} stabs with a sword, hitting {target} in the {part} and dealing {dmg} wound"

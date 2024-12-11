@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://de4ty0qbsb6q5"]
+
+[ext_resource type="PackedScene" uid="uid://crs2fsiygb28k" path="res://scenes/fighters/Swordsman.tscn" id="3_3a7v7"]
+[ext_resource type="Script" path="res://scripts/fight_manager.gd" id="3_bg4ie"]
+[ext_resource type="PackedScene" uid="uid://mpvvysyh2g7o" path="res://scenes/fighters/Lancer.tscn" id="4_5ms68"]
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("fighters")]
+script = ExtResource("3_bg4ie")
+fighters = [NodePath("Swordsman"), NodePath("Lancer")]
+
+[node name="Swordsman" parent="." instance=ExtResource("3_3a7v7")]
+
+[node name="Lancer" parent="." instance=ExtResource("4_5ms68")]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -146.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="LogHeader" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Battle Log"
+horizontal_alignment = 1
+
+[node name="LogBody" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Body
+"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 944.0
+offset_right = 243.0
+offset_bottom = 1007.0
+theme_override_font_sizes/font_size = 40
+text = "SEND IT"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

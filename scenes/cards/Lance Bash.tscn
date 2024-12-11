@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://djrw4a80fj5b6"]
+
+[ext_resource type="Script" path="res://scripts/Actions/CounterAttack.gd" id="1_6qwc1"]
+
+[node name="LanceBash" type="Node2D" groups=["Card"]]
+script = ExtResource("1_6qwc1")
+difficulty = 5
+damage = 1
+description = "{target} is too close! {source} attempts to bash them with the side of the lance"
+counter_msg = "{target} counterattacks for {dmg} damage to {source}'s {part}"
+cardname = "Lance Bash"
+success_msg = "The desperate swing connects for {dmg} damage to {target}'s {part}"

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://nkapcjsnq312"]
+
+[ext_resource type="Script" path="res://scripts/Actions/BasicAttack.gd" id="1_l5csk"]
+
+[node name="LanceThrust" type="Node2D" groups=["Card"]]
+script = ExtResource("1_l5csk")
+difficulty = 2
+damage = 1
+cardname = "Lance Thrust"
+success_msg = "{source} thrusts with a long lance, hitting {target} in the {part} and dealing {dmg} wound"

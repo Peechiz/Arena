@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://crs2fsiygb28k"]
+
+[ext_resource type="Script" path="res://scripts/fighter.gd" id="1_vi0pt"]
+[ext_resource type="PackedScene" uid="uid://c7n1hcm4htajt" path="res://scenes/cards/Sword Stab.tscn" id="2_ldccb"]
+[ext_resource type="PackedScene" uid="uid://pecgvw4bmr65" path="res://scenes/cards/Sword Swing.tscn" id="3_f01qx"]
+
+[node name="Swordsman" type="Node2D"]
+script = ExtResource("1_vi0pt")
+fighter_name = "Swordsman"
+hp = 2
+
+[node name="SwordStab" parent="." instance=ExtResource("2_ldccb")]
+
+[node name="SwordSwing" parent="." instance=ExtResource("3_f01qx")]
+
+[node name="SwordSwing2" parent="." instance=ExtResource("3_f01qx")]
